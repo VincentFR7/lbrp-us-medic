@@ -9,7 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: './',
+  base: process.env.NODE_ENV === 'production' ? '/ww2-medical-forum/' : '/',
   server: {
     port: 5173,
     host: true,
