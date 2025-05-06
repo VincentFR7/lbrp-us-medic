@@ -18,9 +18,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? '/ww2-medical-forum' : '/';
+  
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={basename}>
         <div className="flex flex-col min-h-screen bg-khaki-100">
           <Header />
           <main className="flex-grow container mx-auto px-4 py-8">
